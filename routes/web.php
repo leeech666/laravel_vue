@@ -14,6 +14,11 @@
 Route::get('/', function () {
     return view('home');
 });
+
+Route::get('/home', function () {
+    return view('home');
+});
+
 Route::get('/resume1', function () {
     return view('resume1',['data'=>'Welcome to My Resume Page']);
 });
@@ -27,3 +32,6 @@ Route::get('/welcome1', function () {
 Route::get('/vue_router1', function () {
     return view('vue_router1');
 });
+Auth::routes();
+
+Route::get('/login_status', 'HomeController@index')->name('login_status');
