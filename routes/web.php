@@ -41,6 +41,7 @@ Route::get('/login_status', function () {
   return view('login_status');
 });
 
+
 Auth::routes();
 
 //Route::get('/login_status', 'HomeController@index')->name('login_status');

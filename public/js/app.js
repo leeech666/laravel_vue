@@ -15129,46 +15129,52 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_
 
 
 var router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
-    mode: 'history',
-    routes: [{
-        path: '/',
-        name: 'home',
-        component: __WEBPACK_IMPORTED_MODULE_6__views_Home___default.a
+  mode: 'history',
+  routes: [{
+    path: '/',
+    name: 'home',
+    component: __WEBPACK_IMPORTED_MODULE_6__views_Home___default.a
+  }, {
+    path: '/hello',
+    redirect: '/1-1',
+    name: 'hello',
+    component: __WEBPACK_IMPORTED_MODULE_5__views_Hello___default.a,
+    children: [{ path: '/1', component: { template: '<div><div style="padding-left:350px"><router-link to="/1-1">&hearts;FRONT</router-link>&nbsp;&nbsp;&nbsp;&nbsp;<router-link to="/1-2">&hearts;SIDE</router-link>&nbsp;&nbsp;&nbsp;&nbsp;<router-link to="/1-3">&hearts;BACK</router-link></div><br><router-view></router-view></div>' },
+      children: [{ path: '/1-1', component: { template: '<div><img src="/images/black1.jpg"></div>' } }, { path: '/1-2', component: { template: '<div><img src="/images/black2.jpg"></div>' } }, { path: '/1-3', component: { template: '<div><img src="/images/black3.jpg"></div>' } }] }, { path: '/2', component: { template: '<div><div style="padding-left:350px"><router-link to="/2-1">&hearts;FRONT</router-link>&nbsp;&nbsp;&nbsp;&nbsp;<router-link to="/2-2">&hearts;SIDE</router-link>&nbsp;&nbsp;&nbsp;&nbsp;<router-link to="/2-3">&hearts;BACK</router-link></div><br><router-view></router-view></div>' },
+      children: [{ path: '/2-1', component: { template: '<div><img src="/images/blue1.jpg"></div>' } }, { path: '/2-2', component: { template: '<div><img src="/images/blue2.jpg"></div>' } }, { path: '/2-3', component: { template: '<div><img src="/images/blue3.jpg"></div>' } }]
+    }, { path: '/3', component: { template: '<div><img src="/images/lightblue1.jpg"></div>' } }, { path: '/4', component: { template: '<div><img src="/images/purple1.jpg"></div>' } }, { path: '/5', component: { template: '<div><img src="/images/red1.jpg"></div>' } }]
+
+  }, {
+    path: '/p26',
+    name: 'p26',
+    component: __WEBPACK_IMPORTED_MODULE_8__views_food1___default.a
+  }, { path: '/food',
+    name: 'food',
+    component: __WEBPACK_IMPORTED_MODULE_7__views_food___default.a,
+    children: [{
+      path: '/food1',
+      name: 'food1',
+      component: __WEBPACK_IMPORTED_MODULE_8__views_food1___default.a
     }, {
-        path: '/hello',
-        name: 'hello',
-        component: __WEBPACK_IMPORTED_MODULE_5__views_Hello___default.a
+      path: '/food2',
+      component: __WEBPACK_IMPORTED_MODULE_9__views_food2___default.a
     }, {
-        path: '/p26',
-        name: 'p26',
-        component: __WEBPACK_IMPORTED_MODULE_8__views_food1___default.a
-    }, { path: '/food',
-        name: 'food',
-        component: __WEBPACK_IMPORTED_MODULE_7__views_food___default.a,
-        children: [{
-            path: '/food1',
-            name: 'food1',
-            component: __WEBPACK_IMPORTED_MODULE_8__views_food1___default.a
-        }, {
-            path: '/food2',
-            component: __WEBPACK_IMPORTED_MODULE_9__views_food2___default.a
-        }, {
-            path: '/food3',
-            component: __WEBPACK_IMPORTED_MODULE_10__views_food3___default.a
-        }, {
-            path: '/food4',
-            component: __WEBPACK_IMPORTED_MODULE_11__views_food4___default.a
-        }, {
-            path: '/food5',
-            component: __WEBPACK_IMPORTED_MODULE_12__views_food5___default.a
-        }]
+      path: '/food3',
+      component: __WEBPACK_IMPORTED_MODULE_10__views_food3___default.a
+    }, {
+      path: '/food4',
+      component: __WEBPACK_IMPORTED_MODULE_11__views_food4___default.a
+    }, {
+      path: '/food5',
+      component: __WEBPACK_IMPORTED_MODULE_12__views_food5___default.a
     }]
+  }]
 });
 
 var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
-    el: '#app',
-    components: { App: __WEBPACK_IMPORTED_MODULE_4__views_App___default.a },
-    router: router
+  el: '#app',
+  components: { App: __WEBPACK_IMPORTED_MODULE_4__views_App___default.a },
+  router: router
 });
 
 /***/ }),
@@ -62198,7 +62204,7 @@ var render = function() {
         ]),
         _vm._v(" |\n            "),
         _c("router-link", { attrs: { to: { name: "hello" } } }, [
-          _vm._v("Hello World")
+          _vm._v("Fashion Demo")
         ])
       ],
       1
@@ -62272,7 +62278,134 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("p", [_vm._v("Hello World!")])
+  return _c(
+    "div",
+    [
+      _c("br"),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c(
+        "el-row",
+        [
+          _c(
+            "el-col",
+            { attrs: { span: 7 } },
+            [
+              _c(
+                "el-card",
+                {
+                  staticStyle: {
+                    width: "250px",
+                    height: "480px",
+                    "background-color": "gray"
+                  },
+                  attrs: { "body-style": { padding: "50px" } }
+                },
+                [
+                  _c("p", [_vm._v("CHOOSE YOUR FAVOURATE COLOR")]),
+                  _vm._v(" "),
+                  _c(
+                    "p",
+                    [
+                      _c("router-link", { attrs: { to: "/1-1" } }, [
+                        _c("img", {
+                          attrs: { src: "/images/Capture1black.jpg" }
+                        })
+                      ])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "p",
+                    [
+                      _c("router-link", { attrs: { to: "/2-1" } }, [
+                        _c("img", {
+                          attrs: { src: "/images/Capture1blue.jpg" }
+                        })
+                      ])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "p",
+                    [
+                      _c("router-link", { attrs: { to: "/3" } }, [
+                        _c("img", {
+                          attrs: { src: "/images/Capture1green.jpg" }
+                        })
+                      ])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "p",
+                    [
+                      _c("router-link", { attrs: { to: "/4" } }, [
+                        _c("img", {
+                          attrs: { src: "/images/Capture1purple.jpg" }
+                        })
+                      ])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "p",
+                    [
+                      _c("router-link", { attrs: { to: "/5" } }, [
+                        _c("img", { attrs: { src: "/images/Capture1red.jpg" } })
+                      ])
+                    ],
+                    1
+                  )
+                ]
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "el-col",
+            { staticStyle: { height: "600px" }, attrs: { span: 10 } },
+            [
+              _c(
+                "div",
+                [
+                  _c(
+                    "el-breadcrumb",
+                    { attrs: { "separator-class": "el-icon-arrow-right" } },
+                    [
+                      _c(
+                        "el-breadcrumb-item",
+                        { attrs: { to: { path: "/" } } },
+                        [_vm._v("HOME")]
+                      ),
+                      _vm._v(" "),
+                      _c("el-breadcrumb-item", [_vm._v("SOLUTIONS")]),
+                      _vm._v(" "),
+                      _c("el-breadcrumb-item", [_vm._v("FASHION")])
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _c("br"),
+              _vm._v(" "),
+              _c("router-view")
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
